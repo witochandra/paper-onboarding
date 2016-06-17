@@ -22,7 +22,7 @@ class PageViewItem: UIView {
   var circleLayer: CAShapeLayer?
   var tickIndex: Int = 0
   
-  init(radius: CGFloat, selectedRadius: CGFloat, borderColor: UIColor = .whiteColor(), lineWidth: CGFloat = 3, isSelect: Bool = false) {
+  init(radius: CGFloat, selectedRadius: CGFloat, borderColor: UIColor = .lightGrayColor(), lineWidth: CGFloat = 3, isSelect: Bool = false) {
     self.borderColor = borderColor
     self.lineWidth = lineWidth
     self.circleRadius = radius
@@ -96,7 +96,7 @@ extension PageViewItem {
     let layer = Init(CAShapeLayer()) {
       $0.path        = path.CGPath
       $0.lineWidth   = lineWidth
-      $0.strokeColor = UIColor.whiteColor().CGColor
+      $0.strokeColor = UIColor.lightGrayColor().CGColor
       $0.fillColor   = UIColor.clearColor().CGColor
     }
     return layer
